@@ -1,0 +1,26 @@
+//mixins 
+
+@mixin font($fontWeight: 300, $fontSize: 100%, $fontFamily: $primaryFont, $fontStyle: normal, $lineHeight: 1.6, $textAlign: left, $letterSpacing: 0 ) {
+    font:
+       {
+           weight: $fontWeight;
+           color: $black;
+           size: $fontSize;
+           family: $fontFamily;
+           style: $fontStyle;
+       }
+       
+       
+       line-height: $lineHeight;
+       text-align: $textAlign;
+       letter-spacing: $letterSpacing;
+   
+   }
+
+   @mixin pseudo($pos: absolute, $content: ''){
+    content: $content;
+   
+    position: $pos;
+  }
+
+

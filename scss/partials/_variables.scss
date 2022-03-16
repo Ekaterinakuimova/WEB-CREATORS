@@ -1,0 +1,39 @@
+$extra-light-grey: #FAFAFA;
+$light-grey: #EEEEEE;
+$medium-grey: #ADADAD;
+$dark-grey: #656565;
+$white: white;
+$black: #323232;
+$accent-green: #78CC6D; 
+
+$primaryFont:'Roboto', sans-serif;
+$secondaryFont: 'Advent Pro', sans-serif;
+
+$unit: 0.25em;
+
+$spacing-data: (
+  none: 0,
+  unit: $unit,
+  extra-tight: $unit * 2,
+  tight: $unit * 4,
+  base: $unit * 6,
+  medium: $unit * 8,
+  loose: $unit * 12,
+  extra-loose: $unit * 16,
+  xl: $unit*20
+);
+
+@function spacing($variant: base) {
+  $value: map-get($spacing-data, $variant);
+
+  @if $value == null {
+    @error "Spacing variant `#{$variant}` not found.";
+  }
+
+  @return $value;
+}
+
+
+$sm: 480px; 
+$md: 768px;
+$lg: 1024px; 
